@@ -7,7 +7,7 @@ my_pwm= GPIO.PWM(21, 1000)
 
 my_pwm.start(0) #initiate pwm object at 50% duty cycle
 
-for dc in range(101,0,-1): # loop duty cycle, dc, from 0 to 100. 
+for dc in range(100,0,-1): # loop duty cycle, dc, from 0 to 100. 
   my_pwm.ChangeDutyCycle(dc) # set duty cycle
   sleep (0.02)                  
 my_pwm.stop()
