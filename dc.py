@@ -13,3 +13,5 @@ for dc in range(100,0,-1): # loop duty cycle, dc, from 0 to 100.
 my_pwm.stop()
 
 GPIO.cleanup()
+
+###
