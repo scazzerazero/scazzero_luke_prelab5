@@ -40,7 +40,7 @@ def moveSteps(steps,dir):
 
 
 try:
-  moveSteps(512,1) #1000 steps in the ccw direction.
+  moveSteps(1000,1) #1000 steps in the ccw direction.
 except:
   pass
 GPIO.cleanup() 
