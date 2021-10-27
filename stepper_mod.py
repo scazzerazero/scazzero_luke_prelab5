@@ -37,6 +37,7 @@ def halfstep(dir):
 def moveSteps(steps,dir):
   #move actuation sequence a given number of half steps
   for step in range(steps):
+    print("iterating through steps!")
     halfstep(dir) #call halfsteps that number of times in right direction. Thats it.and
 
 
