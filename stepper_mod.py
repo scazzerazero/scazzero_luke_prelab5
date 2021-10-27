@@ -30,17 +30,19 @@ def halfstep(dir):
   elif state<0:state=7
   for pin in range(4):
     GPIO.output(pins[pin], sequence[state][pin])
+
   delay_us(1000)
 
 #make another private method called...move a certain # half st
 def moveSteps(steps,dir):
   #move actuation sequence a given number of half steps
-  for step in steps:
+  for step in range(steps):
     halfstep(dir) #call halfsteps that number of times in right direction. Thats it.and
 
 
 try:
   moveSteps(1000,1) #1000 steps in the ccw direction.
+
 except:
   pass
 GPIO.cleanup() 
