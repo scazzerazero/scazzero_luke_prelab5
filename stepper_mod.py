@@ -38,7 +38,8 @@ def halfstep(dir):
 #make another private method called...move a certain # half st
 def moveSteps(steps,dir):
   #move actuation sequence a given number of half steps
-  for step in range(10):
+  for step in range(steps):
+    print("the input steps value= "+str(steps))
     print("iterating step in range(steps): "+str(step))
     halfstep(dir) #call halfsteps that number of times in right direction. Thats it.and
 
