@@ -24,17 +24,18 @@ def delay_us(tus): # use microseconds to improve time resolution
 
 def halfstep(dir):
   #dir=+/- 1 (ccw/cw)
-  state=dir
+  global state
+  state+=dir#increment forward, decrement reverse
   #we dont want to go past the list. if we rolloff reset ourselves at beginning open. was previously state +=1
   print("state= "+str(state))
   if state>7: state=0 # we really ony need to check 8 or -1
   elif state<0:state=7
   for pin in range(4):
-    print("pin in range: "+str(pin))
+    print("GPIO output: sequence["+state+"]"+"["+pin+"]"+"= "+ sequence[state][pin])
     GPIO.output(pins[pin], sequence[state][pin]) #indexes sequence [chunk] then the pins in it
 
   delay_us(1000)
-  state = state + 1#increment forward, decrement reverse
+ 
 
 
 #make another private method called...move a certain # half st
