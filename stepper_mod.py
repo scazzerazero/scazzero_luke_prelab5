@@ -47,7 +47,7 @@ def moveSteps(steps,dir):
 
 
 try:
-  moveSteps(1000,1) #10 steps in the ccw direction.
+  moveSteps(8000,1) #10 steps in the ccw direction.
 
 except:
   pass
