@@ -24,6 +24,7 @@ def delay_us(tus): # use microseconds to improve time resolution
 
 def halfstep(dir):
   #dir=+/- 1 (ccw/cw)
+  print("in the halfstep(dir) function")
   state += dir #increment forward, decrement reverse
   print("state= "+str(state))
   #we dont want to go past the list. if we rolloff reset ourselves at beginning open
