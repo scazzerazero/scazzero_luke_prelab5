@@ -49,7 +49,7 @@ def moveSteps(steps,dir):
 try:
   inputstep=input("give inputstep: ")
   inputdir=input("give direction -1 or 1: ")
-  moveSteps(inputstep,inputdir) #512*8 is 1 step in the ccw direction.
+  moveSteps(int(inputstep),int(inputdir)) #512*8 is 1 step in the ccw direction.
 
 except:
   pass
