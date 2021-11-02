@@ -31,6 +31,7 @@ def halfstep(dir):
   if state>7: state=0 # we really ony need to check 8 or -1
   elif state<0:state=7
   for pin in range(4):
+    print("in pin loop")
     print("GPIO output: sequence["+state+"]"+"["+pin+"]"+"= "+ sequence[state][pin])
     GPIO.output(pins[pin], sequence[state][pin]) #indexes sequence [chunk] then the pins in it
 
