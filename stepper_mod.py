@@ -12,7 +12,7 @@ for pin in pins:
 # a new phase so that the rotor is pulled in the right direction:
 sequence= [ [1,0,0,0],[1,1,0,0],[0,1,0,0],[0,1,1,0],
         [0,0,1,0],[0,0,1,1],[0,0,0,1],[1,0,0,1] ] #sequence of steps to go through on whole cycle
-#512 of these sequences will rotate me 360deg
+#512 of these sequences will rotate me 360/8 deg
 
 state = 0 #current position in stator sequence
 
@@ -47,7 +47,7 @@ def moveSteps(steps,dir):
 
 
 try:
-  moveSteps(512*8,1) #10 steps in the ccw direction.
+  moveSteps(512*8,-1) #512*8 is 1 step in the ccw direction.
 
 except:
   pass
