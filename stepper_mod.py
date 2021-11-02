@@ -24,9 +24,7 @@ def delay_us(tus): # use microseconds to improve time resolution
 
 def halfstep(dir):
   #dir=+/- 1 (ccw/cw)
-  print("in the halfstep(dir) function")
   state = dir + 1#increment forward, decrement reverse
-  print("state= "+str(state))
   #we dont want to go past the list. if we rolloff reset ourselves at beginning open
   if state>7: state=0 # we really ony need to check 8 or -1
   elif state<0:state=7
@@ -40,7 +38,6 @@ def halfstep(dir):
 def moveSteps(steps,dir):
   #move actuation sequence a given number of half steps
   for step in range(steps):
-    print("the input steps value= "+str(steps))
     print("iterating step in range(steps): "+str(step))
     halfstep(dir) #call halfsteps that number of times in right direction. Thats it.and
 
