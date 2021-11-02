@@ -26,6 +26,7 @@ def halfstep(dir):
   #dir=+/- 1 (ccw/cw)
   state = dir + 1#increment forward, decrement reverse
   #we dont want to go past the list. if we rolloff reset ourselves at beginning open. was previously state +=1
+  print("state= "+str(state))
   if state>7: state=0 # we really ony need to check 8 or -1
   elif state<0:state=7
   for pin in range(4):
