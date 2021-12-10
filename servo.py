@@ -7,7 +7,7 @@ import RPi.GPIO as GPIO
 import time #unused
 
 GPIO.setmode(GPIO.BCM)
-pwmPin = 24
+pwmPin = 24 #GPIO pinout
 GPIO.setup(pwmPin, GPIO.OUT)
 
 # set min & max % duty cycles (5 and 10 are default values, but play
